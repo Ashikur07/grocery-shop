@@ -1,38 +1,31 @@
-import { useState } from "react";
+import { useLoaderData } from "react-router-dom";
+
 
 const AllArt_craftItems = () => {
-    const [isOpen, setIsOpen] = useState(false);
 
-    const handleMouseEnter = () => {
-        setIsOpen(true);
-    };
+    const items = useLoaderData();
+    // console.log(items);
+    // const item = items.filter(item => item._id == "662b3d1027d7580d0f7d1917");
+    // console.log(item);
 
-    const handleMouseLeave = () => {
-        setIsOpen(false);
-    };
+    //
+    const datas = [
+        {id: '1', name: 'raj', email: 'ashik.ict454@gmail.com'},
+        {id: '1', name: 'Ashik', email: 'ashik.ict454@gmail.com'},
+        {id: '1', name: 'burhan', email: 'ashik.ict454@gmail.com'},
+        {id: '2', name: 'hemayet', email: 'ashik.ict454@gmail.com'},
+        {id: '3', name: 'miad', email: 'ashik.ict454@gmail.com'}
+    ]
+
+    console.log(datas);
+    const data = datas.filter(item => item.id == "1");
+    console.log(data);
+
 
     return (
-        <details
-            className="dropdown m-40"
-            open={isOpen}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-        >
-            <summary className="avatar" >
-                <div className="drop cursor-pointer w-10 lg:w-12 rounded-full ring ring-[#FFB606]">
-                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                </div>
-            </summary>
-
-                <div className="-left-16 top-14 menu dropdown-content z-[1]  bg-slate-600 rounded-lg text-white w-48 p-4 space-y-3">
-                    <p>md ashikur Rahaman </p>
-                    <div className="space-y-3">
-                        <button className="bg-slate-800 py-2 px-3 rounded-md font-semibold w-full">Profile</button><br />
-                        <button className="bg-slate-800 w-full py-2 px-3 rounded-md font-semibold">Logout</button>
-                    </div>
-                </div>
-
-        </details>
+        <div>
+           total item : {items.length}
+        </div>
     );
 };
 

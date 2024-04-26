@@ -45,8 +45,8 @@ const Navbar = () => {
             <li><NavLink to="/allArt&craftItems" onClick={closeDropdown}>All Art & Craft Items</NavLink></li>
             {user && (
                 <>
-                    <li><NavLink to="/addCraftItem" onClick={closeDropdown}>AddCraftItem</NavLink></li>
-                    <li><NavLink to="/myArt&craftList" onClick={closeDropdown}>MyArt&CraftList</NavLink></li>
+                    <li><NavLink to="/addCraftItem" onClick={closeDropdown}>Add Craft Item</NavLink></li>
+                    <li><NavLink to="/myArt&craftList" onClick={closeDropdown}>My Art&Craft List</NavLink></li>
                 </>
             )}
         </>
