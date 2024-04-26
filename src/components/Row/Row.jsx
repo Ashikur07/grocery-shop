@@ -1,34 +1,31 @@
+import { Link } from "react-router-dom";
 
-const Row = ({ user }) => {
+const Row = ({ item }) => {
+
+    console.log(item);
+
     return (
 
-
         <tr>
-            <th>
-                <label>
-                    <input type="checkbox" className="checkbox" />
-                </label>
-            </th>
             <td>
-                <div className="flex items-center gap-3">
-                    <div className="avatar">
-                        <div className="mask mask-squircle w-12 h-12">
-                            <img src={user.photoUrl} alt="Avatar Tailwind CSS Component" />
-                        </div>
-                    </div>
-                    <div>
-                        <div className="font-bold">{user.name}</div>
+                <img className="w-32 h-32" src={item.image
+                } alt="Avatar Tailwind CSS Component" />
+            </td>
 
-                    </div>
-                </div>
+            <td className="text-base font-semibold">
+                {item.item_name}
             </td>
+
+            <td>{item.subcategory_name}</td>
+
+            <td className="font-bold">$ {item.price}</td>
+
+            <td className="font-bold">{item.rating}</td>
+
             <td>
-               {user.email}
+                <Link to={`/details/${item._id}`} className="btn btn-success text-white px-6">details</Link>
             </td>
-            <th>
-                <button className="btn btn-ghost btn-xs">details</button>
-            </th>
-        </tr>
+        </tr >
     );
 };
 

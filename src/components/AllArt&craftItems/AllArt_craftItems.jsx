@@ -1,30 +1,40 @@
 import { useLoaderData } from "react-router-dom";
+import Row from "../Row/Row";
 
 
 const AllArt_craftItems = () => {
 
     const items = useLoaderData();
-    // console.log(items);
-    // const item = items.filter(item => item._id == "662b3d1027d7580d0f7d1917");
-    // console.log(item);
-
-    //
-    const datas = [
-        {id: '1', name: 'raj', email: 'ashik.ict454@gmail.com'},
-        {id: '1', name: 'Ashik', email: 'ashik.ict454@gmail.com'},
-        {id: '1', name: 'burhan', email: 'ashik.ict454@gmail.com'},
-        {id: '2', name: 'hemayet', email: 'ashik.ict454@gmail.com'},
-        {id: '3', name: 'miad', email: 'ashik.ict454@gmail.com'}
-    ]
-
-    console.log(datas);
-    const data = datas.filter(item => item.id == "1");
-    console.log(data);
 
 
     return (
-        <div>
-           total item : {items.length}
+        <div className="overflow-x-auto px-32 h-[80vh] pb-32">
+
+            <h1 className="text-4xl font-bold text-center py-12">All Art & Craft Item List</h1>
+
+            <table className="table border-2">
+                {/* head */}
+                <thead>
+                    <tr className="text-lg text-black">
+                        <th>Image</th>
+                        <th>Item Name</th>
+                        <th>Subcategory Name</th>
+                        <th>Price</th>
+                        <th>Rating</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    { items.map(item => <Row 
+                    key={item._id}
+                    item={item}></Row>)}
+
+                </tbody>
+
+
+            </table>
+
         </div>
     );
 };
