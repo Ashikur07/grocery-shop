@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-bg {
+  background-color: #002147;
+}
+
+.nav-border {
+  border-bottom: 3px solid #FFB606;
+}
+
+.nav-btn {
+  border: 2px solid #FFB606;
+}
+
+.dropdown summary {
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+}
