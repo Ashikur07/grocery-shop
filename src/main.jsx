@@ -15,6 +15,7 @@ import AddCraftItem from './components/AddCraftItem/AddCraftItem.jsx';
 import MyArtCraftList from './components/MyArtCraftList/MyArtCraftList.jsx';
 import Details from './components/Details/Details.jsx';
 import UpdateItem from './components/Update/UpdateItem.jsx';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx';
 
 
 const router = createBrowserRouter([
@@ -44,16 +45,16 @@ const router = createBrowserRouter([
       },
       {
         path: '/addCraftItem',
-        element: <AddCraftItem></AddCraftItem>,
+        element: <PrivateRoute><AddCraftItem></AddCraftItem></PrivateRoute>,
       },
       {
         path: '/myArt&craftList',
-        element: <MyArtCraftList></MyArtCraftList>,
+        element: <PrivateRoute><MyArtCraftList></MyArtCraftList></PrivateRoute>,
         loader: () => fetch(`http://localhost:5000/items`),
       },
       {
         path: 'details/:id',
-        element: <Details></Details>,
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/items/${params.id}`),
       },
       {
