@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 
 const CraftCard = ({ craft }) => {
 
-    const { id, image, item_name, subcategory_Name, processing_time, rating, price } = craft;
+    const { _id, image, item_name, subcategory_Name, processing_time, rating, price } = craft;
 
     return (
         <div data-aos="zoom-in" data-aos-duration="1000" className="card bg-base-100 shadow-xl border border-[#d8c7c7]">
@@ -21,7 +21,7 @@ const CraftCard = ({ craft }) => {
 
                 <div className="flex items-center justify-between">
                     <h1 className='font-bold'>price: {price}</h1>
-                    <Link to={`/details/${id}`} className="btn bg-cyan-800 text-white hover:bg-green-800">View Details</Link>
+                    <Link to={`/craftDetails/${_id}`} className="btn bg-cyan-800 text-white hover:bg-green-800">View Details</Link>
                 </div>
             </div>
         </div>
