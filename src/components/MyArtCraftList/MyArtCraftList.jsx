@@ -16,7 +16,7 @@ const MyArtCraftList = () => {
 
     return (
         <div className="h-[80vh]">
-            <h1 className=' my-8 text-center pt-4 lg:pt-7 h-[70px] lg:h-[100px] card-img-div text-3xl font-bold'>
+            <h1 className='bg-slate-300 my-8 text-center pt-4 lg:pt-7 h-[70px] lg:h-[100px] text-3xl font-bold'>
                 My Art & Craft List</h1>
 
             { items.length > 1?
