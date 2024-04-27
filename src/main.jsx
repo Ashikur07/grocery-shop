@@ -13,6 +13,7 @@ import Home from './components/Home/Home.jsx';
 import AllArt_craftItems from './components/AllArt&craftItems/AllArt_craftItems.jsx';
 import AddCraftItem from './components/AddCraftItem/AddCraftItem.jsx';
 import MyArtCraftList from './components/MyArtCraftList/MyArtCraftList.jsx';
+import Details from './components/Details/Details.jsx';
 
 
 const router = createBrowserRouter([
@@ -48,6 +49,12 @@ const router = createBrowserRouter([
         path:'/myArt&craftList',
         element: <MyArtCraftList></MyArtCraftList>,
         loader: () => fetch(`http://localhost:5000/items`),
+      },
+      {
+        path:'details/:id',
+        element: <Details></Details>,
+        loader: ({params}) => fetch(`http://localhost:5000/items/${params.id}`),
+
       }
     ]
   },
