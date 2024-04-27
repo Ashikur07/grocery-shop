@@ -14,13 +14,14 @@ import AllArt_craftItems from './components/AllArt&craftItems/AllArt_craftItems.
 import AddCraftItem from './components/AddCraftItem/AddCraftItem.jsx';
 import MyArtCraftList from './components/MyArtCraftList/MyArtCraftList.jsx';
 import Details from './components/Details/Details.jsx';
+import UpdateItem from './components/Update/UpdateItem.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    
+
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
         loader: () => fetch(`http://localhost:5000/users`),
       },
       {
-        path:'/allArt&craftItems',
+        path: '/allArt&craftItems',
         element: <AllArt_craftItems></AllArt_craftItems>,
         loader: () => fetch(`http://localhost:5000/items`),
       },
@@ -42,19 +43,23 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path:'/addCraftItem',
+        path: '/addCraftItem',
         element: <AddCraftItem></AddCraftItem>,
       },
       {
-        path:'/myArt&craftList',
+        path: '/myArt&craftList',
         element: <MyArtCraftList></MyArtCraftList>,
         loader: () => fetch(`http://localhost:5000/items`),
       },
       {
-        path:'details/:id',
+        path: 'details/:id',
         element: <Details></Details>,
-        loader: ({params}) => fetch(`http://localhost:5000/items/${params.id}`),
-
+        loader: ({ params }) => fetch(`http://localhost:5000/items/${params.id}`),
+      },
+      {
+        path: 'update/:id',
+        element: <UpdateItem></UpdateItem>,
+        loader: ({params}) => fetch(`http://localhost:5000/items/${params.id}`)
       }
     ]
   },

@@ -77,7 +77,7 @@ const MyListCard = ({ item, items, setItems }) => {
 
                     <button onClick={() => handleDelete(_id)} className='font-medium text-lg btn btn-warning text-white'>Delete</button>
 
-                    <Link to={`/details/${item._id}`}>
+                    <Link to={`/update/${item._id}`}>
                         <button className='view-details ml-16 lg:ml-0 mt-4 lg:mt-0'>Update</button>
                     </Link>
                 </div>

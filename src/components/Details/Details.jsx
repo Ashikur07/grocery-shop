@@ -17,7 +17,6 @@ const Details = () => {
         short_description,
         user_name,
         user_email,
-        uid
     } = item;
 
 
@@ -31,18 +30,19 @@ const Details = () => {
             <section className="bg-white rounded-md px-12 pt-6">
 
                 <h1 className="text-4xl font-bold">{item_name}</h1>
-                <p className="text-xl font-medium py-6">Category : {subcategory_name}</p>
+                <p className="text-xl font-medium py-4">Category : {subcategory_name}</p>
 
                 <div className="text-xl font-medium pb-6 pt-3 border-y-2 space-y-3">
-                    <p className='pt-3 pb-2'>Price : ${item.price}</p>
+                    <p className='pt-2'>Price : ${price}</p>
                     <div className="flex items-center gap-2 ">
                         <p className=''>
-                            Rating : {item.rating}
+                            Rating : {rating}
                         </p>
                         <FaStar />
                     </div>
-                    <p> Customization: {item.customization}</p>
-                    <p> Stock Status: {item.stockStatus}</p>
+                    <p> Customization: {customization}</p>
+                    <p> Stock Status: {stockStatus}</p>
+                    <p>Processing Time : {processing_time}</p>
                 </div>
 
                 <div className="py-6 text-lg">
