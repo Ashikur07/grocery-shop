@@ -22,9 +22,7 @@ const Register = () => {
         const password = e.target.password.value;
         const name = e.target.name.value;
         const photoUrl = e.target.photo.value;
-        const newUsers = { name, email,  photoUrl
-        }
-
+        
         if (password.length < 6) {
             swal({
                 position: "middle",
@@ -81,25 +79,6 @@ const Register = () => {
                 setTimeout(() => {
                     navigate('/');
                 }, 1500);
-
-
-                // send data to the server
-                fetch('http://localhost:5000/users', {
-                    method: 'POST',
-                    headers: {
-                        'content-type': 'application/json'
-                    },
-                    body: JSON.stringify(newUsers)
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        console.log(data);
-                        if (data.insertedId) {
-                           console.log('registration successfully')
-                        }
-                    })
-
-
 
             })
 

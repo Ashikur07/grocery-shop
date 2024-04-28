@@ -65,9 +65,8 @@ const Navbar = () => {
                         </ul>
                     )}
                 </div>
-                <Link to="/" className="flex gap-2" onClick={closeDropdown}>
-                    <img className="w-10 rounded-md hidden lg:block" src="https://i.ibb.co/HqPy6TW/iconfav.jpg" alt="" />
-                    <h1 className="text-lg lg:text-3xl ">StayComfortInn</h1>
+                <Link to="/" className="" onClick={closeDropdown}>
+                    <h1 className="text-lg lg:text-3xl font-bold">Craft Haven</h1>
                 </Link>
             </div>
 

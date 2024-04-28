@@ -29,12 +29,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch(`http://localhost:5000/users`),
+        loader: () => fetch(`https://assignment-10-server-site-beta.vercel.app/users`),
       },
       {
         path: '/allArt&craftItems',
         element: <AllArt_craftItems></AllArt_craftItems>,
-        loader: () => fetch(`http://localhost:5000/items`),
+        loader: () => fetch(`https://assignment-10-server-site-beta.vercel.app/items`),
       },
       {
         path: '/login',
@@ -51,22 +51,22 @@ const router = createBrowserRouter([
       {
         path: '/myArt&craftList',
         element: <PrivateRoute><MyArtCraftList></MyArtCraftList></PrivateRoute>,
-        loader: () => fetch(`http://localhost:5000/items`),
+        loader: () => fetch(`https://assignment-10-server-site-beta.vercel.app/items`),
       },
       {
         path: 'details/:id',
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/items/${params.id}`),
+        loader: ({ params }) => fetch(`https://assignment-10-server-site-beta.vercel.app/items/${params.id}`),
       },
       {
         path: 'craftDetails/:id',
         element: <PrivateRoute><CraftDetails></CraftDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/craftItems/${params.id}`),
+        loader: ({ params }) => fetch(`https://assignment-10-server-site-beta.vercel.app/craftItems/${params.id}`),
       },
       {
         path: 'update/:id',
         element: <UpdateItem></UpdateItem>,
-        loader: ({params}) => fetch(`http://localhost:5000/items/${params.id}`)
+        loader: ({params}) => fetch(`https://assignment-10-server-site-beta.vercel.app/items/${params.id}`)
       }
     ]
   },

@@ -8,7 +8,7 @@ const CraftItemSection = () => {
     console.log(crafts);
 
     useEffect(() =>{
-        fetch('http://localhost:5000/craftItems')
+        fetch('https://assignment-10-server-site-beta.vercel.app/craftItems')
         .then(res => res.json())
         .then(data => setCraft(data))
     },[])

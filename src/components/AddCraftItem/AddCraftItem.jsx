@@ -41,7 +41,7 @@ const AddCraftItem = () => {
         }
 
         // send data to the server
-        fetch('http://localhost:5000/items', {
+        fetch('https://assignment-10-server-site-beta.vercel.app/items', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -58,8 +58,8 @@ const AddCraftItem = () => {
                         text: 'Item Added Successfully',
                         icon: 'success',
                         confirmButtonText: 'Cool'
-                      })
-                      e.target.reset();
+                    })
+                    e.target.reset();
                 }
             })
 

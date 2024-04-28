@@ -21,7 +21,7 @@ const MyListCard = ({ item, items, setItems }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/items/${_id}`, {
+                fetch(`https://assignment-10-server-site-beta.vercel.app/items/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

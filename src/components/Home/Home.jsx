@@ -1,3 +1,4 @@
+import ArtCraftCategories from "../ArtCraftCategories/ArtCraftCategories";
 import Banner from "../Banner/Banner";
 import BestSelling from "../BestSelling/BestSelling";
 import CraftItemSection from "../CraftItemSection/CraftItemSection";
@@ -11,6 +12,8 @@ const Home = () => {
             <LetestCollection></LetestCollection>
             <CraftItemSection></CraftItemSection>
             <BestSelling></BestSelling>
+            <ArtCraftCategories></ArtCraftCategories>
+
         </div>
     );
 };
