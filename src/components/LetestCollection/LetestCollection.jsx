@@ -3,7 +3,7 @@
 const LetestCollection = () => {
     return (
         <div>
-            <h1 className="text-center text-5xl font-medium mb-10 mt-20">Our Leatest Collection</h1>
+            <h1 className="bg-white py-2 mx-auto max-w-xl text-center text-5xl font-medium mb-10 mt-20">Our Leatest Collection</h1>
 
             <div className=" border bg-img h-[700px] justify-between px-10">
 

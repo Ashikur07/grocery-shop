@@ -17,6 +17,12 @@ import Details from './components/Details/Details.jsx';
 import UpdateItem from './components/Update/UpdateItem.jsx';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx';
 import CraftDetails from './components/CraftDetails/CraftDetails.jsx';
+import CharcoalSketching from './components/CharcoalSketching/CharcoalSketching.jsx';
+import CartoonDrawing from './components/CartoonDrawing/CartoonDrawing.jsx';
+import LandscapePainting from './components/LandscapePainting/LandscapePainting.jsx';
+import OilPainting from './components/OilPainting/OilPainting.jsx';
+import PortraitDrawing from './components/PortraitDrawing/PortraitDrawing.jsx';
+import WatercolurPainting from './components/WatercolurPainting/WatercolurPainting.jsx';
 
 
 const router = createBrowserRouter([
@@ -64,12 +70,42 @@ const router = createBrowserRouter([
         loader: ({ params }) => fetch(`https://assignment-10-server-site-beta.vercel.app/craftItems/${params.id}`),
       },
       {
+        path: 'subCategoryItemDetails/:id',
+        element: <CraftDetails></CraftDetails>,
+        loader: ({ params }) => fetch(`https://assignment-10-server-site-beta.vercel.app/subcategory/${params.id}`),
+      },
+    
+      {
         path: 'update/:id',
         element: <UpdateItem></UpdateItem>,
         loader: ({params}) => fetch(`https://assignment-10-server-site-beta.vercel.app/items/${params.id}`)
+      },
+      {
+        path:'/cartoonDrawing',
+        element: <CartoonDrawing></CartoonDrawing>,
+      },
+      {
+        path:'/charcoalSketching',
+        element: <CharcoalSketching></CharcoalSketching>,
+      },
+      {
+        path:'/landscapePainting',
+        element: <LandscapePainting></LandscapePainting>,
+      },
+      {
+        path:'/oilPainting',
+        element: <OilPainting></OilPainting>,
+      },
+      {
+        path:'/portraitDrawing',
+        element: <PortraitDrawing></PortraitDrawing>,
+      },
+      {
+        path:'/watercolurPainting',
+        element: <WatercolurPainting></WatercolurPainting>,
       }
     ]
-  },
+  }     
 ]);
 
 

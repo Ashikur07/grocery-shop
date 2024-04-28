@@ -7,7 +7,7 @@ import LetestCollection from "../LetestCollection/LetestCollection";
 const Home = () => {
 
     return (
-        <div className="bg-white">
+        <div className="">
             <Banner></Banner>
             <LetestCollection></LetestCollection>
             <CraftItemSection></CraftItemSection>

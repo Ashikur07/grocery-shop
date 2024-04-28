@@ -2,16 +2,17 @@ import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 
 
-const CraftCard = ({ craft }) => {
+const SubCategoryItemCard = ({ item }) => {
+    console.log(item);
 
-    const { _id, image, item_name, subcategory_Name, processing_time, rating, price } = craft;
+    const { _id, image, item_name,subcategory_name, processing_time, rating, price } = item;
 
     return (
-        <div data-aos="zoom-in" data-aos-duration="1000" className="bg-white card bg-base-100 shadow-xl border border-[#d8c7c7]">
+        <div data-aos="zoom-in" data-aos-duration="1000" className="card bg-base-100 shadow-xl border border-[#d8c7c7]">
             <figure><img className="h-[350px] w-full" src={image} alt="Image comming" /></figure>
             <div className="card-body mr-4 lg:mr-0">
                 <h2 className="text-2xl font-semibold">{item_name}</h2>
-                <p className='text-base font-semibold'>{subcategory_Name}</p>
+                <p className='text-base font-semibold'>{subcategory_name}</p>
 
                 <div className='pt-5 space-y-2'>
                     <p className="text-base"><span className="font-semibold">Process Time :</span> {processing_time}</p>
@@ -21,7 +22,7 @@ const CraftCard = ({ craft }) => {
 
                 <div className="flex items-center justify-between">
                     <h1 className='font-bold'>price: {price}</h1>
-                    <Link to={`/craftDetails/${_id}`} className="btn bg-cyan-800 text-white hover:bg-green-800">View Details</Link>
+                    <Link to={`/subCategoryItemDetails/${_id}`} className="btn bg-cyan-800 text-white hover:bg-green-800">View Details</Link>
                 </div>
             </div>
         </div>
@@ -29,4 +30,4 @@ const CraftCard = ({ craft }) => {
 };
 
 
-export default CraftCard;
+export default SubCategoryItemCard;

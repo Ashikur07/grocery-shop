@@ -13,8 +13,8 @@ const ArtCraftCategories = () => {
 
 
     return (
-        <div className="mb-32 mt-20">
-            <h1 className='text-4xl font-bold text-center pb-10'>Art & Craft Categories</h1>
+        <div className="mb-32 mt-20 ">
+            <h1 className='bg-white pt-5 text-4xl font-bold text-center pb-5 max-w-xl mx-auto'>Art & Craft Categories</h1>
 
             <div className="grid grid-cols-3 max-w-7xl mx-auto px-10 gap-7">
                 {
