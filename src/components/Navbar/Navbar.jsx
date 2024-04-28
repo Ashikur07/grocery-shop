@@ -53,7 +53,7 @@ const Navbar = () => {
     );
 
     return (
-        <div className="navbar nav-bg md:px-4 lg:px-28 text-white nav-border">
+        <div className="navbar md:px-4 lg:px-28 shadow-xl">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden" onClick={handleDropdownToggle}>
@@ -89,12 +89,12 @@ const Navbar = () => {
                             onMouseLeave={handleMouseLeave}
                         >
                             <summary className="avatar mt-1" >
-                                <div className="drop cursor-pointer w-10 lg:w-12 rounded-full ring ring-[#FFB606]">
+                                <div className="drop cursor-pointer w-10 lg:w-12 rounded-full ring ring-blue-400">
                                     <img src={user.photoURL} />
                                 </div>
                             </summary>
 
-                            <div className="-left-16 top-[62px] menu dropdown-content z-[1]  bg-slate-600 rounded-lg text-white w-48 p-4 space-y-3">
+                            <div className=" -left-16 top-[62px] menu dropdown-content z-[10]  bg-slate-600 rounded-lg text-white w-48 p-4 space-y-3">
                                 <p>md ashikur Rahaman </p>
                                 <div className="space-y-3">
                                     <button className="bg-slate-800 py-2 px-3 rounded-md font-semibold w-full"><Link to='/profile'>Profile</Link></button><br />
@@ -104,18 +104,18 @@ const Navbar = () => {
 
                         </details>
 
-                        <button onClick={handleLogOut} className="mr-3 lg:mr-0 font-bold nav-btn px-3 lg:px-4  rounded-xl hover:bg-blue-900">Logout</button>
+                        <button onClick={handleLogOut} className="mr-3 lg:mr-0 lg:text-lg font-bold nav-btn px-3 lg:px-4  rounded-xl hover:bg-blue-900 hover:text-white">Logout</button>
 
                     </div>
 
                 ) : (
                     <div className="space-x-3">
                         <NavLink to="/login" onClick={closeDropdown}>
-                            <button className="mr-3 lg:mr-0 lg:text-lg font-bold nav-btn px-3 lg:px-4 py-2 rounded-xl hover:bg-blue-900">Login</button>
+                            <button className="mr-3 lg:mr-0 lg:text-lg font-bold nav-btn px-3 lg:px-4 py-2 rounded-xl hover:bg-blue-900 hover:text-white">Login</button>
                         </NavLink>
 
                         <NavLink to="/register" onClick={closeDropdown}>
-                            <button className="mr-3 lg:mr-0 lg:text-lg font-bold nav-btn px-3 lg:px-4 py-2 rounded-xl hover:bg-blue-900">Register</button>
+                            <button className="mr-3 lg:mr-0 lg:text-lg font-bold nav-btn px-3 lg:px-4 py-2 rounded-xl hover:bg-blue-900 hover:text-white">Register</button>
                         </NavLink>
                     </div>
                 )}
