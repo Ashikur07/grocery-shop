@@ -4,6 +4,10 @@ import SubCategoryItemCard from "../SubCategoryItemCard/SubCategoryItemCard";
 
 const LandscapePainting = () => {
 
+    useEffect(() => {
+        document.title = 'Landscape Painting';
+      }, []);
+
     const [items , setItems ] = useState([]);
 
     useEffect(() =>{

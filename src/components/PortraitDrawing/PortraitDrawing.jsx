@@ -5,6 +5,10 @@ import SubCategoryItemCard from "../SubCategoryItemCard/SubCategoryItemCard";
 
 const PortraitDrawing = () => {
 
+    useEffect(() => {
+        document.title = 'Portrait Drawing';
+      }, []);
+
     const [items , setItems ] = useState([]);
 
     useEffect(() =>{

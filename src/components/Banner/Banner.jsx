@@ -11,12 +11,12 @@ const Banner = () => {
 
 
     return (
-        <div className='mb-10 w-[100%] lg:h-[630px]'>
+        <div className='w-[100%] lg:h-[620px]'>
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
                 autoplay={{
-                    delay: 40000,
+                    delay: 4000,
                     disableOnInteraction: false,
                 }}
                 pagination={{

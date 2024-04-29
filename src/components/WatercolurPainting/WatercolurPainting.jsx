@@ -5,6 +5,10 @@ import SubCategoryItemCard from "../SubCategoryItemCard/SubCategoryItemCard";
 
 const WatercolurPainting = () => {
 
+    useEffect(() => {
+        document.title = 'Watercolour Painting';
+      }, []);
+
     const [items , setItems ] = useState([]);
 
     useEffect(() =>{

@@ -1,11 +1,39 @@
+import { Typewriter } from "react-simple-typewriter";
 
 
 const LetestCollection = () => {
     return (
         <div>
-            <h1 className="bg-white py-2 mx-auto max-w-xl text-center text-5xl font-medium mb-10 mt-20">Our Leatest Collection</h1>
+            <h1 className="bg-white mx-auto max-w-xl text-center text-5xl font-medium mb-4 mt-20">Our Leatest Collection</h1>
 
-            <div className=" border bg-img h-[700px] justify-between px-10">
+            {/* new packege style apply */}
+            <div className='App'>
+                <h1 style={{ textAlign: 'center', paddingTop: '', margin: 'auto 0', fontWeight: 'normal', paddingBottom: '20px' }}>
+                    {' '}
+                    <span style={{ fontSize: '40px', color: 'red', fontWeight: 'bold' }}>
+                        {/* Style will be inherited from the parent element */}
+                        <Typewriter
+                            words={[
+                                'Landscape Painting',
+                                'Portrait Drawing',
+                                'Watercolour Painting',
+                                'Oil Painting',
+                                'Charcoal Sketching',
+                                'Cartoon Drawing'
+                            ]}
+                            loop={1000}
+                            cursor
+                            cursorStyle='_'
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                        />
+                    </span>
+                </h1>
+            </div>
+
+
+            <div className=" border bg-img h-[600px] justify-between px-10">
 
                 <div className="flex justify-between ">
                     <div className="flex gap-5">

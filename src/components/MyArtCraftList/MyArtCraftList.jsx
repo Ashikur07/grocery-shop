@@ -6,6 +6,10 @@ import MyListCard from "../MyListCard/MyListCard";
 
 const MyArtCraftList = () => {
 
+    useEffect(() => {
+        document.title = 'My Art & Craft List';
+      }, []);
+
     const { user } = useContext(AuthContext);
     const lodedItems = useLoaderData();
     const [items, setItems] = useState(lodedItems);
@@ -53,7 +57,7 @@ const MyArtCraftList = () => {
             <h1></h1>
 
             <div className="text-center mb-10">
-                <select onClick={handleOnSubmit} className="text-lg select select-info w-full max-w-[250px]">
+                <select onClick={handleOnSubmit} className="bg-white text-lg select select-info w-full max-w-[250px]">
                     <option disabled selected>Select Customization</option>
                     <option>Yes</option>
                     <option>No</option>

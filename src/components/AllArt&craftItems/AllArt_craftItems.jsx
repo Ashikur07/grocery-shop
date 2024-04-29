@@ -1,16 +1,21 @@
 import { useLoaderData } from "react-router-dom";
 import Row from "../Row/Row";
+import { useEffect } from "react";
 
 
 const AllArt_craftItems = () => {
 
     const items = useLoaderData();
 
+    useEffect(() => {
+        document.title = 'All Art & Craft Items';
+      }, []);
+
 
     return (
-        <div className="overflow-x-auto px-32 h-[80vh] pb-32">
+        <div className="overflow-x-auto px-32 min-h-[80vh] pb-32">
 
-            <h1 className="text-4xl font-bold text-center py-12">All Art & Craft Item List</h1>
+            <h1 className="text-4xl font-bold text-center my-10 py-2 max-w-xl mx-auto bg-white">All Art & Craft Item List</h1>
 
             <div className="border-2 p-2 rounded-xl">
                 <table className="table">

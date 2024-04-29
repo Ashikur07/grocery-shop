@@ -5,6 +5,11 @@ import SubCategoryItemCard from "../SubCategoryItemCard/SubCategoryItemCard";
 
 const CharcoalSketching = () => {
 
+    
+    useEffect(() => {
+        document.title = 'Charcoal Sketching';
+      }, []);
+
     const [items , setItems ] = useState([]);
 
     useEffect(() =>{

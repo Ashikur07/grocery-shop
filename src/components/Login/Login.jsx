@@ -73,12 +73,12 @@ const Login = () => {
                  swal({
                     title: "Login Successfull..!",
                     icon: "success",
-                    timer: 1500,
+                    timer: 1000,
                 });
 
                 setTimeout(() => {
                     navigate(location?.state ? location.state : '/');
-                }, 1500);
+                }, 1000);
 
             })
             .catch(() => {

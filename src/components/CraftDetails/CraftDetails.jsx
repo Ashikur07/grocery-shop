@@ -1,7 +1,12 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
+import { useEffect } from "react";
 
 const CraftDetails = () => {
+
+    useEffect(() => {
+        document.title = 'Craft Details';
+      }, []);
 
     const item = useLoaderData();
     console.log(item);

@@ -1,7 +1,12 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
+import { useEffect } from "react";
 
 const SubCategoryItemDetails = () => {
+
+    useEffect(() => {
+        document.title = 'SubCategory Item Details';
+    }, []);
 
     const item = useLoaderData();
     console.log(item);

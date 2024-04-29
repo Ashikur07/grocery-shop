@@ -5,6 +5,10 @@ import SubCategoryItemCard from "../SubCategoryItemCard/SubCategoryItemCard";
 
 const OilPainting = () => {
 
+    useEffect(() => {
+        document.title = 'Oil Painting';
+      }, []);
+
     const [items , setItems ] = useState([]);
 
     useEffect(() =>{

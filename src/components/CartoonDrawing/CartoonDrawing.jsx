@@ -5,6 +5,10 @@ import SubCategoryItemCard from "../SubCategoryItemCard/SubCategoryItemCard";
 
 const CartoonDrawing = () => {
 
+    useEffect(() => {
+        document.title = 'Cartoon Drawing';
+      }, []);
+
     const [items , setItems ] = useState([]);
 
     useEffect(() =>{

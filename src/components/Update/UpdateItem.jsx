@@ -9,8 +9,9 @@ const UpdateItem = () => {
 
     const { user } = useContext(AuthContext);
     const uid = user?.uid;
-    console.log(uid);
-
+    const user_name = user?.displayName;
+    const user_email = user?.email;
+  
     const items = useLoaderData();
     const {
         _id,
@@ -22,8 +23,6 @@ const UpdateItem = () => {
         processing_time,
         stockStatus,
         short_description,
-        user_name,
-        user_email,
     } = items;
 
     const handleAddItem = e => {
@@ -81,7 +80,7 @@ const UpdateItem = () => {
 
     return (
         <div>
-            <h1 className="text-4xl font-bold py-8 text-center">Item Update Now</h1>
+            <h1 className="bg-white  text-4xl font-bold my-8 py-2 max-w-lg mx-auto text-center">Item Update Now</h1>
 
             <form onSubmit={handleAddItem} className="mx-auto mb-28 w-[800px] bg-gray-300 rounded-lg shadow-lg p-6">
 
@@ -92,11 +91,11 @@ const UpdateItem = () => {
                 <div className="flex gap-5 mt-4">
                     <div className="w-full">
                         <p className="font-semibold pb-1">Item Name</p>
-                        <input name="item_name" type="text" placeholder={item_name} className="p-1 w-full border input-info rounded-lg" />
+                        <input name="item_name" type="text" placeholder={item_name} className="bg-white p-1 w-full border input-info rounded-lg" />
                     </div>
                     <div className="w-full">
                         <p className="font-semibold pb-1">Price</p>
-                        <input name="price" type="text" placeholder={price} className="p-1 w-full border input-info rounded-lg" />
+                        <input name="price" type="text" placeholder={price} className="bg-white p-1 w-full border input-info rounded-lg" />
                     </div>
                 </div>
 
@@ -104,11 +103,11 @@ const UpdateItem = () => {
                 <div className="flex gap-5 mt-4 border-b border-[#958d8d] pb-8">
                     <div className="w-full">
                         <p className="font-semibold pb-1">Photo URL</p>
-                        <input name="image" type="text" placeholder={image} className="p-1 w-full border input-info rounded-lg" />
+                        <input name="image" type="text" placeholder={image} className="bg-white p-1 w-full border input-info rounded-lg" />
                     </div>
                     <div className="w-full">
                         <p className="font-semibold pb-1">Subcategory Name</p>
-                        <select name="subcategory_name" defaultValue={subcategory_name} className="p-1 w-full border input-info rounded-lg">
+                        <select name="subcategory_name" defaultValue={subcategory_name} className="bg-white p-1 w-full border input-info rounded-lg">
                             <option disabled>Select subcategory_Name</option>
                             <option>Landscape Painting</option>
                             <option>Portrait Drawing</option>
@@ -124,7 +123,7 @@ const UpdateItem = () => {
                 <div className="flex gap-5 pt-5">
                     <div className="w-full">
                         <p className="font-semibold pb-1">Rating</p>
-                        <select defaultValue={rating} name="rating" className="p-1 w-full border input-info rounded-lg">
+                        <select defaultValue={rating} name="rating" className="bg-white p-1 w-full border input-info rounded-lg">
                             <option disabled>Select Rating</option>
                             <option>5</option>
                             <option>4</option>
@@ -136,7 +135,7 @@ const UpdateItem = () => {
 
                     <div className="w-full">
                         <p className="font-semibold pb-1"> Customization</p>
-                        <select defaultValue={customization} name="customization" className="p-1 w-full border input-info rounded-lg">
+                        <select defaultValue={customization} name="customization" className="bg-white p-1 w-full border input-info rounded-lg">
                             <option disabled>Select Option</option>
                             <option>Yes</option>
                             <option>No</option>
@@ -149,7 +148,7 @@ const UpdateItem = () => {
                 <div className="flex gap-5 pt-5 border-b border-[#958d8d] pb-8">
                     <div className="w-full">
                         <p className="font-semibold pb-1">Processing_time</p>
-                        <select defaultValue={processing_time} name="processing_time" className="p-1 w-full border input-info rounded-lg">
+                        <select defaultValue={processing_time} name="processing_time" className="bg-white p-1 w-full border input-info rounded-lg">
                             <option disabled>Select time</option>
                             <option>1 days</option>
                             <option>2-7 days</option>
@@ -162,7 +161,7 @@ const UpdateItem = () => {
 
                     <div className="w-full">
                         <p className="font-semibold pb-1"> Stock Status</p>
-                        <select defaultValue={stockStatus} name="stockStatus" className="p-1 w-full border input-info rounded-lg">
+                        <select defaultValue={stockStatus} name="stockStatus" className="bg-white p-1 w-full border input-info rounded-lg">
                             <option disabled>Select Option</option>
                             <option>Yes</option>
                             <option>No</option>
@@ -174,25 +173,12 @@ const UpdateItem = () => {
                 {/* Row 5 */}
                 <div className="mt-5">
                     <p className="font-semibold pb-2">Short description</p>
-                    <textarea name="short_description" className="w-full border input-info rounded-lg" placeholder={short_description} rows="5"></textarea>
+                    <textarea name="short_description" className="bg-white w-full border input-info rounded-lg" placeholder={short_description} rows="5"></textarea>
                 </div>
 
-                <h1 className="flex mt-8 items-center gap-3 text-2xl pb-2 font-bold border-b border-[#958d8d]">
-                    <FaUserCircle /> <span>User Information</span></h1>
-
-                {/* Row 1,1*/}
-                <div className="flex gap-5 mt-4">
-                    <div className="w-full">
-                        <p className="font-semibold pb-1">User Name</p>
-                        <input name="user_name" type="text" placeholder={user_name} className="p-1 w-full border input-info rounded-lg" />
-                    </div>
-                    <div className="w-full">
-                        <p className="font-semibold pb-1">Email</p>
-                        <input name="user_email" type="text" placeholder={user_email} className="p-1 w-full border input-info rounded-lg" />
-                    </div>
-                </div>
-
-                <div className="text-center mt-10 mb-4 ">
+               
+        
+                <div className="text-center mt-8 mb-4 ">
                     <input className="btn text-white btn-success px-6" type="submit" name="" id="" value='Update Now' />
                 </div>
 

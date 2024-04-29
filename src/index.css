@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .nav-bg {
   background-color: #002147;
 }
@@ -35,6 +36,6 @@
 }
 
 .bg-img{
-  background-image: url('https://i.ibb.co/j3pvnnr/premium-photo-1683134520102-a7b65579c4bf-q-80-w-2044-auto-format-fit-crop-ixlib-rb-4-0.jpg');
+  background-image: url('https://i.ibb.co/TRyCgFM/photo-1458682625221-3a45f8a844c7-q-80-w-1974-auto-format-fit-crop-ixlib-rb-4-0.jpg');
   background-size: cover;
 }
