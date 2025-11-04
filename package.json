@@ -11,12 +11,15 @@
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
+    "aos": "^2.3.4",
     "axios": "^1.12.2",
+    "chart.js": "^4.5.1",
     "firebase": "^10.11.1",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.2.8",
+    "react-chartjs-2": "^5.3.1",
     "react-dom": "^18.2.0",
     "react-google-calendar-api": "^2.3.0",
     "react-icons": "^5.5.0",
@@ -25,7 +28,7 @@
     "react-tooltip": "^5.26.4",
     "sort-by": "^1.2.0",
     "sweetalert": "^2.1.2",
-    "sweetalert2": "^11.10.8",
+    "sweetalert2": "^11.26.3",
     "swiper": "^11.1.1"
   },
   "devDependencies": {
