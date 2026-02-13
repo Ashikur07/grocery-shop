@@ -19,7 +19,7 @@ Live link : https://assignment-10-by-ashik.netlify.app
 • Painting and Drawing 
 
 # Used npm package name:
-1. React-simple-typewriter
+1. React-simple-typewriter 
 
 2. React-tooltip 
 
