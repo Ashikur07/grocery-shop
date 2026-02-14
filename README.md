@@ -21,7 +21,7 @@ Live link : https://assignment-10-by-ashik.netlify.app
 # Used npm package name:
 1. React-simple-typewriter 
 
-2. React-tooltip 
+2. React-tooltip  
 
 
 
