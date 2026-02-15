@@ -15,7 +15,7 @@ Live link : https://assignment-10-by-ashik.netlify.app
 
 • Responsive Design and Cross-Platform Compatibility .
 
-# Selected category   
+# Selected category
 • Painting and Drawing 
 
 # Used npm package name:
