@@ -24,8 +24,6 @@ Live link : https://assignment-10-by-ashik.netlify.app
 2. React-tooltip
 
 
-
-
 # React + Vite  
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
