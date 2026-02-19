@@ -5,7 +5,7 @@ Live link : https://assignment-10-by-ashik.netlify.app
 
 # Feature and Charactristics of my website :
 
-• Personalized Recommendations
+• Personalized Recommendations 
 
 • Implement a secure login and registration system using encryption protocols to protect user data.
 
