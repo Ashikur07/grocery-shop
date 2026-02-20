@@ -5,7 +5,7 @@ Live link : https://assignment-10-by-ashik.netlify.app
 
 # Feature and Charactristics of my website :
 
-• Personalized Recommendations  
+• Personalized Recommendations
 
 • Implement a secure login and registration system using encryption protocols to protect user data.
 
@@ -16,7 +16,7 @@ Live link : https://assignment-10-by-ashik.netlify.app
 • Responsive Design and Cross-Platform Compatibility .
 
 # Selected category
-• Painting and Drawing 
+• Painting and Drawing  
 
 # Used npm package name:
 1. React-simple-typewriter 
