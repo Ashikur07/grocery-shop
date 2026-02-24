@@ -8,7 +8,7 @@ const Banner = () => {
   return (
     <div 
       className="h-80 rounded-lg bg-cover bg-center flex items-center justify-center text-center p-8 mb-10 shadow-lg"
-      style={{ backgroundImage: "url('https://www.retail.org.au/wp-content/uploads/Article-Preview-Image-81.png')" }}
+      style={{ backgroundImage: "url('https://images.ctfassets.net/qr8kennq1pom/3dMTMcPoo7uT1nLE3CbFWF/681b126ba784692dafe61f63f02c2374/Untitled_design__10_.png?fm=jpg&fl=progressive&q=70')" }}
       data-aos="fade-down" // <-- ব্যানার অ্যানিমেশন
     >
       <div 
